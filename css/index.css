@@ -9,15 +9,14 @@
 .nbar {
   display: flex;
   justify-content: space-between;
-  background-color: wheat;
+  background-color: rgb(219, 184, 118);
   align-items: center;
   height: 4rem;
-  /* border-bottom: 2px solid brown; */
   box-shadow: 0px 0px 3px 2px brown;
   position: sticky;
   top: 0;
 }
-
+    
 .nbar > ul {
   display: flex;
 }
@@ -56,6 +55,8 @@
     color: brown;
     background-color: rgb(241, 199, 121);
 }
+
+/* Background */
 .bbg{
     display: flex;
     justify-content: center;
@@ -64,19 +65,23 @@
     width: 100vw;
 }
 .bgsec{
-    background-color: rebeccapurple;
+    background-color: rgb(219, 184, 118);
     width: 60vw;
     height: 60vh;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
-
+body{
+    background-color: wheat;
+}
 .rhs{
     margin: 1rem;
 }
 .rhs > img{
     height: 55vh;
     width: 25vw;
+    border-radius: 10px;
 }
 
 .lhs{
@@ -84,17 +89,56 @@
 }
 .lhs > p{
     font-weight: bold;
-    margin-bottom: 2rem;
-    
-    
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: brown;
 }
 .titlew > input{
     width: 25vw;
     padding: 0.5rem 1rem;
     margin-bottom: 2rem;
+    border-radius: 10px;
+    background-color: rgb(224, 205, 168);
 }
 
-.desw > textarea{
+.titlew > input:focus{
+    outline: 3px solid rgb(151, 65, 65);
+}
+
+.descw > textarea{
+    width: 25vw;
+    height: 30vh;
     padding: 0.5rem 1rem;
-    margin-bottom: 2rem;
+    resize: none;
+    border-radius: 10px;
+    background-color: rgb(224, 205, 168)
+}
+
+.descw > textarea:focus{
+    outline: 3px solid rgb(151, 65, 65);
+}
+
+.lhs div >button{
+    margin-top: 1.5rem;
+    padding: 0.40rem 1.3rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.lhs  div> button:active{
+    color: brown;
+    background-color: rgb(241, 199, 121);
+}
+
+.desc{
+    font-size: 1.2rem;
+    
+}
+.tit{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
