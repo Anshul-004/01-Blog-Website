@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif, arial;
+  list-style: none;
+}
+main{
+  background-image: url(../img/img.avif);
+  background-size: cover;
+
+}
+/* main navbar */
+.nbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(245, 206, 133);
+  align-items: center;
+  height: 4rem;
+  box-shadow: 0px 0px 3px 2px brown;
+  position: sticky;
+  top: 0;
+}
+
+.nbar > ul {
+  display: flex;
+}
+
+.nbar > ul > li {
+  margin: 1rem;
+  color: brown;
+}
+
+.nbar > ul > li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-left: 3rem;
+  font-weight: bold;
+  color: rgb(49, 58, 43);
+}
+
+.wbtn {
+  margin-right: 3rem;
+}
+
+.wbtn > button {
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.wbtn > button:active {
+  color: brown;
+  background-color: rgb(241, 199, 121);
+}
+
+/* Body Content */
+.bbg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  width: 100vw;
+}
+
+/* main cardbody */
+.bgsec {
+  background-color: wheat;
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.lhs {
+  margin: 1.3rem 2rem;
+}
+
+.rhs {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.rhs > img {
+  height: 30vh;
+  width: 20vw;
+  border-radius: 10px;
+}
+
+.c-title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: brown;
+}
+
+.c-desp{
+  color: brown;
+}
