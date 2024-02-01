@@ -43,6 +43,10 @@ main{
   color: rgb(49, 58, 43);
 }
 
+.title:hover{
+  cursor: pointer;
+}
+
 .anchort{
   text-decoration: none;
   color: brown;
