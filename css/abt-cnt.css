@@ -59,9 +59,152 @@ main {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .wbtn > button:active {
   color: brown;
   background-color: rgb(241, 199, 121);
+}
+
+/* contact us page */
+
+.cnt-main {
+  margin-top: 1rem;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cnt-descp {
+  color: brown;
+  font-size: 1.5rem;
+}
+.cnt-descp1 {
+  color: brown;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cnt-title :first-child {
+  font-weight: bold;
+  color: brown;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* form ka box */
+.cnt-form {
+  height: 59vh;
+  width: 30vw;
+  background-color: wheat;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 3px rgb(140, 108, 49);
+}
+
+.cnt-fb {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.75rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: brown;
+}
+.cnt-fb > input {
+  margin-top: 3px;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: brown;
+  font-size: 1.1rem;
+  background-color: rgb(253, 242, 220);
+}
+
+.cnt-fb > input:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+.cnt-fb > textarea {
+  margin-top: 3px;
+  padding: 0.5rem;
+  height: 7rem;
+  color: brown;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  background-color: rgb(253, 242, 220);
+  border-radius: 10px;
+
+  resize: none;
+}
+.cnt-fb > textarea:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+.cnt-fb > label {
+  margin-left: 0.5rem;
+}
+
+.cnt-save {
+  display: flex;
+  justify-content: center;
+}
+
+.cnt-save > button {
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.cnt-save > button:active {
+  color: brown;
+  background-color: rgb(241, 199, 121);
+}
+
+/* About us */
+
+.abt-main {
+  height: 100vh;
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.abt-title {
+  font-weight: bold;
+  color: brown;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.abt-descp {
+  width: 55vw;
+  color: brown;
+  font-size: 1.5rem;
+  margin-bottom: 6rem;
+}
+
+.abt-img{
+    display: flex;
+    justify-content: center;
+}
+
+.abt-img >img{
+    width: 50%;
 }

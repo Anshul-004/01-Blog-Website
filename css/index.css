@@ -16,7 +16,6 @@ main{
   background-color: rgb(245, 206, 133);
   align-items: center;
   height: 4rem;
-  /* border-bottom: 2px solid brown; */
   box-shadow: 0px 0px 3px 2px brown;
   position: sticky;
   top: 0;
@@ -59,6 +58,8 @@ main{
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .wbtn > button:active {
@@ -113,10 +114,10 @@ main{
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   border-radius: 10px;
-  outline: none;
   color: brown;
-  font-size: 1.1rem;
+  outline: none;
   border: none;
+  font-size: 1.1rem;
   background-color: rgb(253, 242, 220);
 }
 
