@@ -4,12 +4,16 @@
   font-family: "Kanit", sans-serif, arial;
   list-style: none;
 }
-
+main{
+  background-image: url(../img/img.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* main navbar */
 .nbar {
   display: flex;
   justify-content: space-between;
-  background-color: wheat;
+  background-color: rgb(245, 206, 133);
   align-items: center;
   height: 4rem;
   /* border-bottom: 2px solid brown; */
@@ -27,8 +31,8 @@
   color: brown;
 }
 
-.nbar > ul > li:hover{
-    font-weight: bold;
+.nbar > ul > li:hover {
+  font-weight: bold;
 }
 
 .title {
@@ -43,7 +47,7 @@
 }
 
 .wbtn > button {
-  padding: 0.40rem 1.3rem;
+  padding: 0.4rem 1.3rem;
   border-radius: 10px;
   background-color: brown;
   color: wheat;
@@ -52,49 +56,98 @@
   cursor: pointer;
 }
 
-.wbtn > button:active{
-    color: brown;
-    background-color: rgb(241, 199, 121);
-}
-.bbg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-}
-.bgsec{
-    background-color: rebeccapurple;
-    width: 60vw;
-    height: 60vh;
-    display: flex;
-    justify-content: space-between;
+.wbtn > button:active {
+  color: brown;
+  background-color: rgb(241, 199, 121);
 }
 
-.rhs{
-    margin: 1rem;
+/* Body Content */
+.bbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
-.rhs > img{
-    height: 55vh;
-    width: 25vw;
-}
-
-.lhs{
-    margin: 1rem;
-}
-.lhs > p{
-    font-weight: bold;
-    margin-bottom: 2rem;
-    
-    
-}
-.titlew > input{
-    width: 25vw;
-    padding: 0.5rem 1rem;
-    margin-bottom: 2rem;
+.bgsec {
+  background-color: wheat;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
 }
 
-.desw > textarea{
-    padding: 0.5rem 1rem;
-    margin-bottom: 2rem;
+.rhs {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+.rhs > img {
+  height: 55vh;
+  width: 25vw;
+  border-radius: 10px;
+}
+
+.lhs {
+  margin: 1.3rem 2.5rem;
+}
+.textlabel {
+  display: flex;
+  justify-content: center;
+}
+.lhs div > p {
+  
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: rgb(165, 54, 54);
+}
+.titlew > input {
+  width: 25vw;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  outline: none;
+  color: brown;
+  font-size: 1.1rem;
+  border: none;
+  background-color: rgb(253, 242, 220);
+}
+
+.titlew > input:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+.descw > textarea {
+  font-size: 1.1rem;
+  width: 25vw;
+  height: 25vh;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  resize: none;
+  background-color: rgb(253, 242, 220);
+  border-radius: 10px;
+  outline: none;
+  color: brown;
+  border: none;
+}
+
+.descw > textarea:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+.lhs div > button{
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.lhs div > button:active {
+  color: brown;
+  background-color: rgb(241, 199, 121);
 }
