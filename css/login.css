@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif, arial;
+}
+
+/* main background, do NOT change */
+.imgbg {
+  display: flex;
+  background-image: url(../img/blog-lg.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Login Form Background */
+.loginf {
+  margin-right: 7rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 1rem;
+  width: 25vw;
+  height: 60vh;
+  align-items: center;
+  background: linear-gradient(white, wheat, rgb(224, 217, 142));
+  opacity: 0.9;
+
+  /* shadow */
+  box-shadow: 4px 4px 10px 1px black;
+}
+
+/* Contents of Login form starts..*/
+.loginf > span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: brown;
+}
+
+.ip {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.ip > input {
+  padding: 0.5rem;
+  border: 1px solid black;
+  outline: none;
+  width: 85%;
+  float: right;
+  border-radius: 10px;
+  background-color: rgb(245, 237, 224);
+}
+
+.ip > label {
+  color: rgb(152, 72, 72);
+}
+
+.ip > input:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+/* buttons */
+.login {
+  display: flex;
+  margin-top: 2.5rem;
+  justify-content: center;
+}
+
+.login > button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.login > button:active {
+  background-color: rgb(240, 200, 125);
+  color: brown;
+}
+
+.forgot {
+  display: flex;
+  justify-content: right;
+  font-weight: bold;
+  font-size: 1.09rem;
+  margin-bottom: 1.7rem;
+}
+
+.forgot > a {
+  text-decoration: none;
+}
+
+.create {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/* Done only for anchor tag to remove underline */
+.create > p > a {
+  text-decoration: none;
+}
+
+/* Popup stuff */
+
+.overlay {
+  display: none;
+  /* display: flex; */
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.674);
+}
+
+/* the card, donot change values, accha nahi lagega */
+.signup {
+  height: 83vh;
+  width: 25vw;
+  border-radius: 30px;
+  background-color: wheat;
+  box-shadow: 4px 4px 15px 5px black;
+}
+
+.hdr {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+
+.u-info {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1.75rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: brown;
+}
+.u-info > input {
+  margin-top: 3px;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(245, 237, 224);
+}
+
+.u-info > input:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+/* buttons */
+.signupbtn {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.signupbtn > button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin: 0 3rem 0.5rem;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signupbtn > button:active {
+  background-color: rgb(240, 200, 125);
+  color: brown;
+}
