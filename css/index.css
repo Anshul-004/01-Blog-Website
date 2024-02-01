@@ -42,6 +42,11 @@ main{
   color: rgb(49, 58, 43);
 }
 
+.anchort{
+  text-decoration: none;
+  color: brown;
+}
+
 .wbtn {
   margin-right: 3rem;
 }

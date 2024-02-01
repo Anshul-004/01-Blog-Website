@@ -5,10 +5,9 @@
   list-style: none;
 }
 
-main{
+main {
   background-image: url(../img/img.avif);
   background-size: cover;
-
 }
 /* main navbar */
 .nbar {
@@ -43,7 +42,7 @@ main{
   color: rgb(49, 58, 43);
 }
 
-.anchort{
+.anchort {
   text-decoration: none;
   color: brown;
 }
@@ -65,50 +64,4 @@ main{
 .wbtn > button:active {
   color: brown;
   background-color: rgb(241, 199, 121);
-}
-
-/* Body Content */
-.bbg {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
-  width: 100vw;
-}
-
-/* main cardbody */
-.bgsec {
-  background-color: wheat;
-  width: 40vw;
-  height: 40vh;
-  display: flex;
-  border-radius: 10px;
-  justify-content: space-between;
-  margin: 2rem;
-}
-
-.lhs {
-  margin: 1.3rem 2rem;
-}
-
-.rhs {
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-}
-.rhs > img {
-  height: 30vh;
-  width: 20vw;
-  border-radius: 10px;
-}
-
-.c-title{
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: brown;
-}
-
-.c-desp{
-  color: brown;
 }
