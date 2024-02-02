@@ -4,7 +4,7 @@
   font-family: "Kanit", sans-serif, arial;
   list-style: none;
 }
-main{
+main {
   background-image: url(../img/img.avif);
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,11 +41,11 @@ main{
   color: rgb(49, 58, 43);
 }
 
-.title:hover{
+.title:hover {
   cursor: pointer;
 }
 
-.anchort{
+.anchort {
   text-decoration: none;
   color: brown;
 }
@@ -87,9 +87,10 @@ main{
   border-radius: 10px;
   justify-content: space-between;
   box-shadow: 2px -2px 12px 2px rgb(191, 154, 80);
+  overflow: hidden;
 }
 
-.bgsec:hover{
+.bgsec:hover {
   box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
 }
 
@@ -104,10 +105,26 @@ main{
   border-radius: 10px;
 }
 
-@media only screen and (max-width:555px) {
-  .rhs > img{
-    height: 25vh;
-  } 
+@media only screen and (max-width: 555px) {
+  .rhs > img {
+    height: 30vh;
+  }
+  .bgsec {
+    width: 65vw;
+    flex-direction: column;
+  }
+
+  .titlew > input {
+    width: 50vw !important;
+  }
+
+  .descw > textarea {
+    width: 50vw !important;
+  }
+
+ .rhs{
+  justify-content: center;
+ }
 }
 
 .lhs {
@@ -118,7 +135,6 @@ main{
   justify-content: center;
 }
 .lhs div > p {
-  
   font-weight: bold;
   margin-bottom: 2rem;
   font-size: 1.3rem;
@@ -157,7 +173,7 @@ main{
 .descw > textarea:focus {
   outline: 3px solid rgb(151, 65, 65);
 }
-.lhs div > button{
+.lhs div > button {
   padding: 0.4rem 1.3rem;
   border-radius: 10px;
   background-color: brown;
@@ -167,7 +183,6 @@ main{
   cursor: pointer;
   border: none;
   outline: none;
-
 }
 
 .lhs div > button:active {
