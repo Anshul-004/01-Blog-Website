@@ -115,6 +115,12 @@ main {
   box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
 }
 
+@media only screen and (max-width: 555px) {
+  .cnt-form{
+    width: 60vw;
+  }
+}
+
 .cnt-fb {
   display: flex;
   flex-direction: column;
