@@ -105,11 +105,8 @@ main{
     width: 100vw;
     height: 50vh;
     flex-direction: column;
-  }
-
-  
+  } 
 }
-
 
 .lhs {
   margin: 1.3rem 2rem;

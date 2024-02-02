@@ -104,6 +104,12 @@ main{
   border-radius: 10px;
 }
 
+@media only screen and (max-width:555px) {
+  .rhs > img{
+    height: 25vh;
+  } 
+}
+
 .lhs {
   margin: 1.3rem 2.5rem;
 }
