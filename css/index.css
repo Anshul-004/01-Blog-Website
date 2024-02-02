@@ -92,12 +92,12 @@ main{
   justify-content: space-between;
   margin: 2rem;
   overflow: scroll;
-  box-shadow: 2px 2px 12px 4px rgb(191, 154, 80);
+  box-shadow: 2px -2px 12px 2px rgb(191, 154, 80);
 }
 
 .bgsec:hover{
   
-  box-shadow: -2px -2px 12px 4px rgb(191, 154, 80);
+  box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
 }
 
 .lhs {

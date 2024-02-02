@@ -86,6 +86,11 @@ main{
   display: flex;
   border-radius: 10px;
   justify-content: space-between;
+  box-shadow: 2px -2px 12px 2px rgb(191, 154, 80);
+}
+
+.bgsec:hover{
+  box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
 }
 
 .rhs {
