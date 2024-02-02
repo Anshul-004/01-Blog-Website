@@ -4,11 +4,10 @@
   font-family: "Kanit", sans-serif, arial;
   list-style: none;
 }
-
 main{
   background-image: url(../img/img.avif);
   background-size: cover;
-
+  background-repeat: no-repeat;
 }
 /* main navbar */
 .nbar {
@@ -33,7 +32,6 @@ main{
 
 .nbar > ul > li:hover {
   font-weight: bold;
-  cursor: pointer;
 }
 
 .title {
@@ -76,26 +74,18 @@ main{
 /* Body Content */
 .bbg {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100vw;
 }
-
-/* main cardbody */
 .bgsec {
   background-color: wheat;
-  width: 40vw;
-  height: 40vh;
+  width: 60vw;
+  height: 60vh;
   display: flex;
   border-radius: 10px;
   justify-content: space-between;
-  margin: 2rem;
-  box-shadow: 4px 4px 10px 3px rgb(140, 108, 49);
-}
-
-.lhs {
-  margin: 1.3rem 2rem;
 }
 
 .rhs {
@@ -104,18 +94,70 @@ main{
   align-items: center;
 }
 .rhs > img {
-  height: 30vh;
-  width: 20vw;
+  height: 55vh;
+  width: 25vw;
   border-radius: 10px;
 }
 
-.c-title{
-  font-size: 1.2rem;
+.lhs {
+  margin: 1.3rem 2.5rem;
+}
+.textlabel {
+  display: flex;
+  justify-content: center;
+}
+.lhs div > p {
+  
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: rgb(165, 54, 54);
+}
+.titlew > input {
+  width: 25vw;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
   color: brown;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  background-color: rgb(253, 242, 220);
 }
 
-.c-desp{
+.titlew > input:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+
+.descw > textarea {
+  font-size: 1.1rem;
+  width: 25vw;
+  height: 25vh;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  resize: none;
+  background-color: rgb(253, 242, 220);
+  border-radius: 10px;
+  outline: none;
   color: brown;
+  border: none;
+}
+
+.descw > textarea:focus {
+  outline: 3px solid rgb(151, 65, 65);
+}
+.lhs div > button{
+  padding: 0.4rem 1.3rem;
+  border-radius: 10px;
+  background-color: brown;
+  color: wheat;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.lhs div > button:active {
+  color: brown;
+  background-color: rgb(241, 199, 121);
 }
