@@ -91,8 +91,13 @@ main{
   border-radius: 10px;
   justify-content: space-between;
   margin: 2rem;
-  box-shadow: 4px 4px 10px 3px rgb(140, 108, 49);
   overflow: scroll;
+  box-shadow: 2px 2px 12px 4px rgb(191, 154, 80);
+}
+
+.bgsec:hover{
+  
+  box-shadow: -2px -2px 12px 4px rgb(191, 154, 80);
 }
 
 .lhs {
