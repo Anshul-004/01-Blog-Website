@@ -82,7 +82,7 @@ main{
 .bgsec {
   background-color: wheat;
   width: 60vw;
-  height: 60vh;
+  height: fit-content;
   display: flex;
   border-radius: 10px;
   justify-content: space-between;

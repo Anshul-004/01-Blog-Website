@@ -100,6 +100,17 @@ main{
   box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
 }
 
+@media only screen and (max-width:555px) {
+  .bgsec{
+    width: 100vw;
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  
+}
+
+
 .lhs {
   margin: 1.3rem 2rem;
 }
