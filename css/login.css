@@ -25,11 +25,12 @@
   width: 25vw;
   height: 60vh;
   align-items: center;
-  background: linear-gradient(white, wheat, rgb(224, 217, 142));
+  /* background: linear-gradient(white, wheat, rgb(224, 217, 142)); */
+  background-color: wheat;
   opacity: 0.9;
 
   /* shadow */
-  box-shadow: 4px 4px 10px 1px black;
+  box-shadow: -2px 2px 12px 2px rgb(24, 24, 23);
 }
 
 /* Contents of Login form starts..*/

@@ -5,10 +5,10 @@
   list-style: none;
 }
 
-main {
-  background-image: url(../img/img.avif);
-  background-size: cover;
+body {
+  background: linear-gradient(90deg,rgb(238, 211, 181),rgb(221, 182, 140));
 }
+
 /* main navbar */
 .nbar {
   display: flex;
@@ -76,7 +76,7 @@ main {
 
 .cnt-main {
   margin-top: 1rem;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -112,10 +112,10 @@ main {
 }
 
 .cnt-form:hover{
-  box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
+  box-shadow: 2px -2px 12px 4px rgb(159, 128, 66);
 }
 
-@media only screen and (max-width: 555px) {
+@media only screen and (max-width: 960px) {
   .cnt-form{
     width: 60vw;
   }
@@ -191,7 +191,7 @@ main {
 /* About us */
 
 .abt-main {
-  height: 100vh;
+  height: 100%;
   display: flex;
   margin-top: 5rem;
   flex-direction: column;

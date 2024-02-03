@@ -5,10 +5,8 @@
   list-style: none;
 }
 
-main{
-  background-image: url(../img/img.avif);
-  background-size: cover;
-
+body {
+  background: linear-gradient(90deg, rgb(238, 211, 181), rgb(221, 182, 140));
 }
 /* main navbar */
 .nbar {
@@ -44,11 +42,11 @@ main{
   color: rgb(49, 58, 43);
 }
 
-.title:hover{
+.title:hover {
   cursor: pointer;
 }
 
-.anchort{
+.anchort {
   text-decoration: none;
   color: brown;
 }
@@ -80,7 +78,7 @@ main{
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
-  width: 100vw;
+  width: 100%;
 }
 
 /* main cardbody */
@@ -92,26 +90,41 @@ main{
   border-radius: 10px;
   justify-content: space-between;
   margin: 2rem;
-  overflow: scroll;
+  overflow: auto;
   box-shadow: 2px -2px 12px 2px rgb(191, 154, 80);
 }
 
-.bgsec:hover{
-  
-  box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
+.bgsec:hover {
+  box-shadow: 2px -2px 12px 4px rgb(159, 128, 66);
 }
 
-@media only screen and (max-width:555px) {
-  .bgsec{
+@media only screen and (max-width: 960px) {
+  .bgsec {
     width: 100vw;
     height: 50vh;
-    flex-direction: row;
+    flex-direction: column;
     margin: 1rem;
-  } 
+  }
+
+  .rhs{
+    justify-content: center;
+    height: 30vh;
+    overflow: auto;
+  }
+  .rhs > img{
+    height: 70%;
+  }
+
+  .c-title{
+    font-size: 1rem;
+  }
+  .c-desp{
+    font-size: 0.9rem;
+  }
 }
 
 .lhs {
-  margin: 1.3rem 2rem;
+  margin: 1.3rem 1.2rem;
 }
 
 .rhs {
@@ -120,18 +133,17 @@ main{
   align-items: center;
 }
 .rhs > img {
-  height: 30vh;
-  width: 20vw;
+  width: 15vw;
   border-radius: 10px;
 }
 
-.c-title{
+.c-title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: brown;
 }
 
-.c-desp{
+.c-desp {
   color: brown;
 }

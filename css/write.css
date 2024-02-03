@@ -4,11 +4,13 @@
   font-family: "Kanit", sans-serif, arial;
   list-style: none;
 }
-main {
-  background-image: url(../img/img.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
+
+body {
+  background: linear-gradient(90deg, rgb(238, 211, 181), rgb(221, 182, 140));
+  /* did to fix scroll bar */
+  overflow: auto;
 }
+
 /* main navbar */
 .nbar {
   display: flex;
@@ -76,9 +78,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100%;
 }
+
 .bgsec {
   background-color: wheat;
   width: 60vw;
@@ -91,7 +94,7 @@ main {
 }
 
 .bgsec:hover {
-  box-shadow: 2px -2px 12px 4px rgb(191, 154, 80);
+  box-shadow: 2px -2px 12px 4px rgb(159, 128, 66);
 }
 
 .rhs {
@@ -105,7 +108,7 @@ main {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 555px) {
+@media only screen and (max-width: 960px) {
   .rhs > img {
     height: 30vh;
   }
