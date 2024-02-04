@@ -78,7 +78,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  height: 90vh;
   width: 100%;
 }
 
@@ -108,28 +108,6 @@ body {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 960px) {
-  .rhs > img {
-    height: 30vh;
-  }
-  .bgsec {
-    width: 65vw;
-    flex-direction: column;
-  }
-
-  .titlew > input {
-    width: 50vw !important;
-  }
-
-  .descw > textarea {
-    width: 50vw !important;
-  }
-
- .rhs{
-  justify-content: center;
- }
-}
-
 .lhs {
   margin: 1.3rem 2.5rem;
 }
@@ -149,9 +127,9 @@ body {
   margin-bottom: 2rem;
   border-radius: 10px;
   color: brown;
+  font-size: 1.1rem;
   outline: none;
   border: none;
-  font-size: 1.1rem;
   background-color: rgb(253, 242, 220);
 }
 
@@ -191,4 +169,44 @@ body {
 .lhs div > button:active {
   color: brown;
   background-color: rgb(240, 194, 108);
+}
+
+@media only screen and (max-width: 980px) {
+  .lhs div > p {
+    font-size: 2.50rem;
+  }
+  
+  .rhs > img {
+    height: 15vh;
+  }
+  .rhs {
+    justify-content: center;
+  }
+
+  .lhs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bgsec {
+    width: 70vw;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .titlew > input {
+    width: 50vw;
+    font-size: 1.7rem;
+  }
+
+  .descw > textarea {
+    width: 50vw;
+    height: 10vh;
+    font-size: 1.7rem;
+  }
+  .lhs div > button {
+    padding: 1.5rem 2rem;
+    margin: 1rem 1rem;
+    font-size: 1.7rem;
+  }
 }

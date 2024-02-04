@@ -24,26 +24,42 @@
   padding: 1rem;
   width: 25vw;
   height: 60vh;
-  align-items: center;
-  /* background: linear-gradient(white, wheat, rgb(224, 217, 142)); */
   background-color: wheat;
-  opacity: 0.9;
+  justify-content: space-evenly;
 
   /* shadow */
   box-shadow: -2px 2px 12px 2px rgb(24, 24, 23);
+}
+
+/* Media Query For Page and Forms */
+@media only screen and (max-width: 980px) {
+  .imgbg {
+    justify-content: center;
+    background-size: 100% 100%;
+  }
+
+  .loginf {
+    justify-content: center;
+    margin-right: 0;
+    width: 70%;
+    height: fit-content;
+  }
 }
 
 /* Contents of Login form starts..*/
 .loginf > span {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: brown;
+  text-align: center;
 }
 
 .ip {
-  margin-bottom: 1.5rem;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ip > input {
@@ -51,6 +67,8 @@
   border: 1px solid black;
   outline: none;
   width: 85%;
+  color: brown;
+  font-size: 1rem;
   float: right;
   border-radius: 10px;
   background-color: rgb(245, 237, 224);
@@ -62,28 +80,31 @@
 
 .ip > input:focus {
   outline: 3px solid rgb(151, 65, 65);
+  border: 1px solid transparent;
 }
 
 /* buttons */
 .login {
   display: flex;
-  margin-top: 2.5rem;
   justify-content: center;
 }
 
 .login > button {
-  padding: 0.7rem 1.5rem;
+  padding: 0.70rem 1.50rem;
   border-radius: 10px;
   background-color: brown;
   color: wheat;
   font-weight: bold;
   font-size: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .login > button:active {
-  background-color: rgb(240, 200, 125);
+  background-color: rgb(240, 196, 112);
   color: brown;
 }
 
@@ -93,6 +114,8 @@
   font-weight: bold;
   font-size: 1.09rem;
   margin-bottom: 1.7rem;
+  width: 100%;
+  text-align: right;
 }
 
 .forgot > a {
@@ -105,18 +128,68 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
+
 /* Done only for anchor tag to remove underline */
 .create > p > a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 980px) {
+  .forgot {
+    font-size: 2rem;
+    text-align: right;
+  }
+  .create {
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .loginf > span {
+    font-size: 4rem;
+  }
+
+  .login > button {
+    padding: 1.5rem 2rem;
+    margin: 2rem 1rem;
+    font-size: 2rem;
+  }
+
+  .ip > input{
+    width: 85%;
+    padding: 1rem ;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    margin-left: 0.5rem;
+  }
+
+  .ip{
+    margin-bottom: 2.50rem;
+    margin-left: 1.25rem;
+  }
+
+  .ip > label{
+    font-size: 2rem;
+  }
+
+  .loginf > span{
+    margin-bottom: 3.0rem;
+    margin-top: 1.50rem;
+  }
+
+  .create{
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Popup Screen */
 /* Popup stuff */
 
 .overlay {
   display: none;
   /* display: flex; */
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -125,8 +198,8 @@
 
 /* the card, donot change values, accha nahi lagega */
 .signup {
-  height: 83vh;
-  width: 25vw;
+  height: fit-content;
+  width: 25%;
   border-radius: 30px;
   background-color: wheat;
   box-shadow: 4px 4px 15px 5px black;
@@ -136,7 +209,7 @@
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: brown;
 }
@@ -145,7 +218,7 @@
   display: flex;
   flex-direction: column;
   margin: 1.5rem 1.75rem;
-  font-size: 1.15rem;
+  font-size: 1.40rem;
   font-weight: bold;
   color: brown;
 }
@@ -155,7 +228,9 @@
   border: none;
   outline: none;
   border-radius: 10px;
-  background-color: rgb(245, 237, 224);
+  background-color: rgb(253, 240, 219);
+  color: brown;
+  font-size: 1.15rem;
 }
 
 .u-info > input:focus {
@@ -167,6 +242,7 @@
   display: flex;
   justify-content: center;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .signupbtn > button {
@@ -178,9 +254,45 @@
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .signupbtn > button:active {
   background-color: rgb(240, 200, 125);
   color: brown;
+}
+
+
+@media only screen and (max-width: 980px) {
+
+  .overlay{
+    height: 100dvh;
+  }
+
+  .signup{
+    width: 65%;
+  }
+
+  .hdr{
+    font-size: 3rem;
+  }
+
+  .u-info{
+    font-size: 2rem;
+  }
+  
+  .u-info > input{
+    font-size: 1.7rem;
+    padding: 1rem;
+  }
+
+  .signupbtn{
+    display: flex;
+    justify-content: space-around;
+  }
+  .signupbtn > button{
+    padding: 1.5rem 2rem;
+    margin: 2rem 1rem;
+  }
 }
