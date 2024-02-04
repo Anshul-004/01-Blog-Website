@@ -97,7 +97,7 @@ body {
 /* contact us page */
 
 .cnt-main {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -225,6 +225,14 @@ body {
     padding: 1.5rem 2rem;
     margin: 2rem 1rem;
     font-size: 1.5rem;
+  }
+  .cnt-title :first-child{
+    font-size: 5rem;
+    text-align: center;
+  }
+  .cnt-title > p{
+    font-size: 3rem;
+    text-align: center;
   }
 }
 
