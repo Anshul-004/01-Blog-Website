@@ -3,7 +3,7 @@
 
 <head>
     <title>Contact Us</title>
-    <link rel="icon" href="/img/faviconmain.ico"/>
+    <link rel="icon" href="/img/faviconmain.ico" />
     <link rel="stylesheet" href="./css/abt-cnt.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,8 @@
             </ul>
             <p class="wbtn">
                 <!-- button link kia h -->
-                <button type="button" onclick="location.href='./write.html'">Write &nbsp;<i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button type="button" onclick="location.href='./write.html'">Write &nbsp;<i class="fa fa-pencil"
+                        aria-hidden="true"></i> </button>
             </p>
         </header>
 
@@ -49,18 +50,19 @@
                     <form action="">
                         <div class="cnt-fb">
                             <label for="">Name </label>
-                            <input type="text" placeholder="Enter Your Full Name">
+                            <input type="text" placeholder="Enter Your Full Name" id="cnt-name">
                         </div>
                         <div class="cnt-fb">
                             <label for="">E-Mail ID </label>
-                            <input type="email" placeholder="Enter Your Email ID">
+                            <input type="email" placeholder="Enter Your Email ID" id="cnt-email">
                         </div>
                         <div class="cnt-fb">
                             <label for="">Query</label>
-                            <textarea type="text" placeholder="Enter Your Query"></textarea>
+                            <textarea type="text" placeholder="Enter Your Query" id="cnt-query"></textarea>
                         </div>
                         <div class="cnt-save">
-                            <button type="button"><i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Save</button>
+                            <button type="button" id="cnt-button"><i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                &nbsp;Save</button>
                         </div>
                     </form>
                 </div>
@@ -68,6 +70,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/contact.js"></script>
 </body>
 
 </html>
