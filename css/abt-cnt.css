@@ -23,6 +23,8 @@ body {
 
 .nbar > ul {
   display: flex;
+  padding-left: 0;
+  align-items: center;
 }
 
 .nbar > ul > li {
@@ -70,6 +72,26 @@ body {
 .wbtn > button:active {
   color: brown;
   background-color: rgb(239, 174, 54);
+}
+
+/* navbar ke lie mediaquery */
+@media only screen and (max-width: 980px) {
+  .nbar {
+    height: 10rem;
+    font-size: 2rem;
+    box-shadow: 0px 0px 5px 4px brown;
+  }
+  .title {
+    font-size: 2.4rem;
+    margin-left: 1rem;
+  }
+  .wbtn > button {
+    padding: 1.2rem 2rem;
+    font-size: 1.7rem;
+  }
+  .navbar > ul {
+    padding-left: 0;
+  }
 }
 
 /* contact us page */
@@ -199,7 +221,7 @@ body {
   .cnt-fb > label {
     font-size: 2rem;
   }
-  .cnt-save > button{
+  .cnt-save > button {
     padding: 1.5rem 2rem;
     margin: 2rem 1rem;
     font-size: 1.5rem;
@@ -230,6 +252,7 @@ body {
   width: 55vw;
   color: brown;
   font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 6rem;
 }
 
@@ -240,4 +263,18 @@ body {
 
 .abt-img > img {
   width: 50%;
+}
+
+@media only screen and (max-width: 980px) {
+  .abt-title {
+    font-size: 5rem;
+  }
+  .abt-descp {
+    font-size: 3rem;
+    width: 80vw;
+    text-align: center;
+  }
+  .abt-img > img {
+    width: 80%;
+  }
 }
