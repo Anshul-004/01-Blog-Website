@@ -38,14 +38,24 @@ signupbtn.addEventListener("click", () => {
     return value.email === newuser.email;
   });
 
-  if (userexist === undefined) {
-    userlist.push(newuser);
-    //stringify will convert to string whilst storing to local storage
-    localStorage.setItem("users", JSON.stringify(userlist));
-    alert("Registration Successful, Login Now");
-    popup.classList.add("d-none");
+  if (
+    name.value == "" ||
+    email.value == "" ||
+    mobile.value == "" ||
+    pass.value == ""
+  ) {
+    alert("Fill all the fields to continue.");
+    return false;
   } else {
-    alert("Can't Register, Try Again");
+    if (userexist === undefined) {
+      userlist.push(newuser);
+      //stringify will convert to string whilst storing to local storage
+      localStorage.setItem("users", JSON.stringify(userlist));
+      alert("Registration Successful, Login Now");
+      popup.classList.add("d-none");
+    } else {
+      alert("Can't Register, Try Again");
+    }
   }
 });
 
@@ -63,15 +73,20 @@ lbtn.addEventListener("click", () => {
 
   userlist = userlist === null ? [] : JSON.parse(userlist);
 
-  let userexist = userlist.find((value) => {
+  let userexist = userlist.findIndex((value) => {
     return value.email == username && value.pass == password;
   });
 
-  if (userexist === undefined) {
-    alert("User Not Found, Try Again");
+  if (username == "" || password == "") {
+    alert("Fill all the fields to continue.");
+    return false;
   } else {
-    alert("Logged In Successfully");
-    localStorage.setItem("login", 0);
-    window.location.replace("./write.html");
+    if (userexist === -1) {
+      alert("User Not Found, Try Again");
+    } else {
+      alert("Logged In Successfully");
+      localStorage.setItem("login", userexist); //index dena chahiye of which user is logged in
+      window.location.replace("./write.html");
+    }
   }
 });

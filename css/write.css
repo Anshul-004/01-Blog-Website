@@ -25,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 0;
+  margin-right: 12rem;
 }
 
 .nbar > ul > li {
@@ -45,6 +46,12 @@ body {
 
 .title:hover {
   cursor: pointer;
+}
+
+.user-txt{
+  color: brown;
+  margin-left: 10rem;
+  font-weight: 400;
 }
 
 .anchort {
