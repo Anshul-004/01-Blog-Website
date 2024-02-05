@@ -33,19 +33,45 @@ signupbtn.addEventListener("click", () => {
   //if the list which we got is null (i.e. first user, create new list) else convert the list we got from storage to object and then push data in it
   userlist = userlist === null ? [] : JSON.parse(userlist);
 
-//   if email is repeated we must not create another account, returns undefined when false
+  //   if email is repeated we must not create another account, returns undefined when false
   let userexist = userlist.find((value) => {
     return value.email === newuser.email;
   });
-
 
   if (userexist === undefined) {
     userlist.push(newuser);
     //stringify will convert to string whilst storing to local storage
     localStorage.setItem("users", JSON.stringify(userlist));
     alert("Registration Successful, Login Now");
-  } 
-  else {
+    popup.classList.add("d-none");
+  } else {
     alert("Can't Register, Try Again");
+  }
+});
+
+//Login Logic
+
+let luser = document.querySelector("#luser");
+let lpass = document.querySelector("#lpass");
+let lbtn = document.querySelector("#lbtn");
+
+lbtn.addEventListener("click", () => {
+  let username = luser.value;
+  let password = lpass.value;
+
+  let userlist = localStorage.getItem("users");
+
+  userlist = userlist === null ? [] : JSON.parse(userlist);
+
+  let userexist = userlist.find((value) => {
+    return value.email === username && value.password === password;
+  });
+
+  if (userexist === -1) {
+    alert("User Not Found, Try Again");
+  } else {
+    alert("Logged In Successfully");
+    localStorage.setItem("login", userexist);
+    window.location.replace("/write.html");
   }
 });
