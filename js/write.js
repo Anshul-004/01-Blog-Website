@@ -6,6 +6,7 @@ let imgt = document.querySelector("#imgt");
 
 let usr = document.querySelector(".user-txt");
 
+let nm = null;
 //if login notfound
 if (localStorage.getItem("login") === null) {
   window.location.replace("./login.html");
@@ -13,7 +14,7 @@ if (localStorage.getItem("login") === null) {
   let list = localStorage.getItem("users");
   let login = localStorage.getItem("login");
   list = JSON.parse(list);
-  let nm = list[login].name;
+  nm = list[login].name;
   usr.innerHTML = `Hello, <b>${nm}</b> !`;
 }
 
@@ -22,6 +23,7 @@ wrt_button.addEventListener("click", () => {
     title: wrt_title.value,
     description: wrt_desc.value,
     url: wrt_url.value,
+    author:nm,
   };
 
   let ext_blog = localStorage.getItem("blogs");

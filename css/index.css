@@ -143,6 +143,11 @@ body {
   color: brown;
 }
 
+.author{
+  text-align: right;
+  font-size: 0.9rem;
+}
+
 @media only screen and (max-width: 980px) {
   .bgsec {
     width: 100vw;
