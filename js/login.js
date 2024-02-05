@@ -64,14 +64,14 @@ lbtn.addEventListener("click", () => {
   userlist = userlist === null ? [] : JSON.parse(userlist);
 
   let userexist = userlist.find((value) => {
-    return value.email === username && value.password === password;
+    return value.email == username && value.pass == password;
   });
 
-  if (userexist === -1) {
+  if (userexist === undefined) {
     alert("User Not Found, Try Again");
   } else {
     alert("Logged In Successfully");
-    localStorage.setItem("login", userexist);
-    window.location.replace("/write.html");
+    localStorage.setItem("login", 0);
+    window.location.replace("./write.html");
   }
 });
