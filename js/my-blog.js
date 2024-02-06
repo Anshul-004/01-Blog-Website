@@ -1,3 +1,8 @@
+//if login notfound
+if (localStorage.getItem("login") === null) {
+  window.location.replace("./login.html");
+}
+
 //for login button
 let log = document.querySelector("#log");
 
@@ -18,23 +23,23 @@ if (localStorage.getItem("login") === null) {
   });
 }
 
-
 //userblogs
 let myblog = localStorage.getItem("blogs")
 myblog = JSON.parse(myblog)
 
-console.log(myblog)
 
 let userblogs = myblog.filter((value) =>{
-    return value.loginid == localStorage.getItem("login")
+  return value.loginid ==localStorage.getItem("login")
 })
+console.log(userblogs)
+
 //cpy
 let card = document.querySelector("#dyn-blog");
 
-let ext_blog = localStorage.getItem("blogs");
-ext_blog = JSON.parse(ext_blog);
+// let ext_blog = localStorage.getItem("blogs");
+// ext_blog = JSON.parse(ext_blog);
 
-let blg = ext_blog.map((value) => {
+let blg = userblogs.map((value) => {
   return `<article class="bgsec">
     <div class="lhs">
         <div class="c-title">

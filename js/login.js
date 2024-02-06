@@ -51,6 +51,11 @@ signupbtn.addEventListener("click", () => {
       userlist.push(newuser);
       //stringify will convert to string whilst storing to local storage
       localStorage.setItem("users", JSON.stringify(userlist));
+      name.value = "";
+      email.value = "";
+      mobile.value = "";
+      pass.value = "";
+      cpass.value = "";
       alert("Registration Successful, Login Now");
       popup.classList.add("d-none");
     } else {
