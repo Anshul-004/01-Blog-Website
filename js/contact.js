@@ -13,24 +13,46 @@ if (localStorage.getItem("login") === null) {
 } else {
   log.innerHTML = "Log Out";
   log.addEventListener("click", () => {
-    let cnf = confirm("Are You Sure, You Want to LOGOUT ?");
-
-    if (cnf === true) {
-      localStorage.removeItem("login");
-      window.location.replace("./index.html");
-    }
+    Swal.fire({
+      title: "Are you sure ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Log Out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("login");
+        window.location.replace("./index.html");
+      }
+    });
   });
 }
 
+//push data
 let info = [];
 
 cnt_button.addEventListener("click", () => {
-  info.push({
+  let newinfo = {
     name: cnt_name.value,
     email: cnt_email.value,
     query: cnt_query.value,
-  });
+  };
+
+  if (cnt_name.value == "" || cnt_email.value == "" || cnt_query.value == "") {
+    toasterdanger("Fill out all the fields");
+    return false;
+  }
+
+  let info = localStorage.getItem("contact");
+  info = info === null ? [] : JSON.parse(info);
+
+  info.push(newinfo);
   console.log(info);
+
+  localStorage.setItem("contact", JSON.stringify(info));
+  toastersuccess("We'll reach you out soon");
+
   cnt_name.value = "";
   cnt_email.value = "";
   cnt_query.value = "";

@@ -18,10 +18,10 @@ if (localStorage.getItem("login") === null) {
   nm = list[login].name;
   usr.innerHTML = `Hello, <b>${nm}</b> !`;
 }
-let imgp = document.querySelector(".rhs")
-wrt_url.addEventListener("blur", () =>{
-  imgp.innerHTML = `<img src="${wrt_url.value}" alt="blg-img"></img>`
-})
+let imgp = document.querySelector(".rhs");
+wrt_url.addEventListener("blur", () => {
+  imgp.innerHTML = `<img src="${wrt_url.value}" alt="blg-img"></img>`;
+});
 
 wrt_button.addEventListener("click", () => {
   let blog = {
@@ -29,12 +29,12 @@ wrt_button.addEventListener("click", () => {
     description: wrt_desc.value,
     url: wrt_url.value,
     author: nm,
-    loginid:localStorage.getItem("login"),
-    id:Date.now(),
+    loginid: localStorage.getItem("login"),
+    id: Date.now(),
   };
 
   if (wrt_title.value == "" || wrt_desc.value == "" || wrt_url.value == "") {
-    alert("Please Fill Out All The Fields");
+    toasterdanger("Fill out all the fields");
     return false;
   } else {
     let ext_blog = localStorage.getItem("blogs");
@@ -43,7 +43,7 @@ wrt_button.addEventListener("click", () => {
     ext_blog.unshift(blog);
 
     localStorage.setItem("blogs", JSON.stringify(ext_blog));
-    alert("Blog Saved Successfully");
+    toastersuccess("Blog saved successfully")
 
     wrt_title.value = "";
     wrt_desc.value = "";
@@ -55,10 +55,17 @@ wrt_button.addEventListener("click", () => {
 let logout = document.querySelector("#logout");
 
 logout.addEventListener("click", () => {
-  let cnf = confirm("Are You Sure, You Want to LOGOUT ?");
-
-  if (cnf === true) {
-    localStorage.removeItem("login");
-    window.location.replace("./index.html");
-  }
+  Swal.fire({
+    title: "Are you sure ?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, Log Out",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("login");
+      window.location.replace("./index.html");
+    }
+  });
 });

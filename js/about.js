@@ -9,22 +9,16 @@ if (localStorage.getItem("login") === null) {
   log.innerHTML = "Log Out";
   log.addEventListener("click", () => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "Are you sure ?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Yes, Log Out",
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem("login");
         window.location.replace("./index.html");
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success",
-        });
       }
     });
   });

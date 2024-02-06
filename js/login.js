@@ -38,13 +38,18 @@ signupbtn.addEventListener("click", () => {
     return value.email === newuser.email;
   });
 
+  if (pass.value != cpass.value) {
+    toasterdanger("Passwords Do Not Match");
+    return false;
+  }
+
   if (
     name.value == "" ||
     email.value == "" ||
     mobile.value == "" ||
     pass.value == ""
   ) {
-    alert("Fill all the fields to continue.");
+    toasterdanger("Fill out all fields to continue");
     return false;
   } else {
     if (userexist === undefined) {
@@ -56,10 +61,12 @@ signupbtn.addEventListener("click", () => {
       mobile.value = "";
       pass.value = "";
       cpass.value = "";
-      alert("Registration Successful, Login Now");
+
+      toastersuccess("Registration Successful, Login Now.");
+
       popup.classList.add("d-none");
     } else {
-      alert("Can't Register, Try Again");
+      toasterdanger("Email is already registered");
     }
   }
 });
@@ -83,15 +90,17 @@ lbtn.addEventListener("click", () => {
   });
 
   if (username == "" || password == "") {
-    alert("Fill all the fields to continue.");
+    toasterdanger("Fill all fields to continue");
     return false;
   } else {
     if (userexist === -1) {
-      alert("User Not Found, Try Again");
+      toasterdanger("Invalid Credentials");
     } else {
-      alert("Logged In Successfully");
       localStorage.setItem("login", userexist); //index dena chahiye of which user is logged in
-      window.location.replace("./write.html");
+      toastersuccess("Login Successful");
+      setTimeout(() => {
+        window.location.replace("./write.html");
+      }, 700);
     }
   }
 });

@@ -9,14 +9,22 @@ if (localStorage.getItem("login") === null) {
 } else {
   log.innerHTML = "Log Out";
   log.addEventListener("click", () => {
-    let cnf = confirm("Are You Sure, You Want to LOGOUT ?");
-
-    if (cnf === true) {
-      localStorage.removeItem("login");
-      window.location.replace("./index.html");
-    }
+    Swal.fire({
+      title: "Are you sure ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Log Out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("login");
+        window.location.replace("./index.html");
+      }
+    });
   });
 }
+
 
 //for blog
 let card = document.querySelector("#dyn-blog");

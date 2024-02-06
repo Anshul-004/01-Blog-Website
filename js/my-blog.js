@@ -14,46 +14,78 @@ if (localStorage.getItem("login") === null) {
 } else {
   log.innerHTML = "Log Out";
   log.addEventListener("click", () => {
-    let cnf = confirm("Are You Sure, You Want to LOGOUT ?");
-
-    if (cnf === true) {
-      localStorage.removeItem("login");
-      window.location.replace("./index.html");
-    }
+    Swal.fire({
+      title: "Are you sure ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Log Out",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("login");
+        window.location.replace("./index.html");
+      }
+    });
   });
 }
 
 //userblogs
-let myblog = localStorage.getItem("blogs")
-myblog = JSON.parse(myblog)
 
+function printblog() {
+  let myblog = localStorage.getItem("blogs");
+  myblog = JSON.parse(myblog);
 
-let userblogs = myblog.filter((value) =>{
-  return value.loginid ==localStorage.getItem("login")
-})
-console.log(userblogs)
+  let userblogs = myblog.filter((value) => {
+    return value.loginid == localStorage.getItem("login");
+  });
 
-//cpy
-let card = document.querySelector("#dyn-blog");
+  let card = document.querySelector("#dyn-blog");
 
-// let ext_blog = localStorage.getItem("blogs");
-// ext_blog = JSON.parse(ext_blog);
-
-let blg = userblogs.map((value) => {
-  return `<article class="bgsec">
+  let blg = userblogs.map((value) => {
+    return `<article class="bgsec">
     <div class="lhs">
         <div class="c-title">
             <p>${value.title}</p>
         </div>
         <div class="c-desp">
             <p>${value.description}</p>
-            <p class="author"> -- ${value.author}</p>
+            <p class="delbtn"><button id="blgdel" data-id="${value.id}">Delete</button></p>
         </div>
     </div>
     <div class="rhs">
         <img src="${value.url}" alt="img Placeholder">
     </div>
   </article>`;
-});
+  });
 
-card.innerHTML = blg.join("");
+  card.innerHTML = blg.join("");
+  delelement();
+}
+
+printblog();
+
+//for deleting elements
+function delelement() {
+  let deletebtn = document.querySelectorAll("#blgdel");
+
+  console.log(deletebtn); // ab ye array return krega
+
+  deletebtn.forEach((value) => {
+    console.log(value); // will return individual buttons, so har value ko event listner add krdo.
+
+    value.addEventListener("click", () => {
+      //jo bhi button clicked hai, uski id must be returned
+      let id = value.dataset.id;
+      console.log(id); //returns id as number.
+
+      //now, blogs lo and remove blog with certain id
+      let newblogs = JSON.parse(localStorage.getItem("blogs"));
+      newblogs = newblogs.filter((temp) => {
+        return temp.id != id;
+      });
+      localStorage.setItem("blogs", JSON.stringify(newblogs));
+      printblog();
+    });
+  });
+}
