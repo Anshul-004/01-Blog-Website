@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>About Us</title>
+    <title>My Blog</title>
     <link rel="icon" href="/img/faviconmain.ico"/>
-    <link rel="stylesheet" href="./css/abt-cnt.css">
+    <link rel="stylesheet" href="./css/my-blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -29,31 +30,16 @@
                 <li><a href="./contact.html" class="anchort">Contact</a></li>
             </ul>
             <p class="wbtn">
-                <!-- button link kia h -->
-                <button type="button" id="log"></button>
-                <button type="button" onclick="location.href='./write.html'">Write &nbsp;<i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <!-- button link kia hai -->
+                <button type="button" id="log">Log</button>
+                <button type="button" onclick="location.href='./write.html'">Write &nbsp;<i class="fa fa-pencil"
+                        aria-hidden="true"></i> </button>
             </p>
         </header>
 
-        <!-- body -->
-
-        <section class="abt-main">  
-            <div class="abt-title">
-                <p>
-                    Who Are We ?
-                </p>
-            </div>
-            <div class="abt-descp">
-                <p>
-                    Forget textbooks, this is real life! Join us as we navigate the highs and lows of college, share hacks, and spill the coffee on some mind-boggling life tricks.
-                </p>
-            </div>
-            <div class="abt-img">
-                <img src="./img/tdm-bgrem.png" alt="SwagDeer">
-            </div>
-        </section>
+        <section class="bbg" id="dyn-blog"></section>
     </main>
-    <script src="./js/about.js"></script>
+    <script src="./js/my-blog.js"></script>
 </body>
 
 </html>

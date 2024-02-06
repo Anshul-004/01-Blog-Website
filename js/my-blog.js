@@ -18,7 +18,17 @@ if (localStorage.getItem("login") === null) {
   });
 }
 
-//for blog
+
+//userblogs
+let myblog = localStorage.getItem("blogs")
+myblog = JSON.parse(myblog)
+
+console.log(myblog)
+
+let userblogs = myblog.filter((value) =>{
+    return value.loginid == localStorage.getItem("login")
+})
+//cpy
 let card = document.querySelector("#dyn-blog");
 
 let ext_blog = localStorage.getItem("blogs");
@@ -42,4 +52,3 @@ let blg = ext_blog.map((value) => {
 });
 
 card.innerHTML = blg.join("");
-// console.log(ext_blog);

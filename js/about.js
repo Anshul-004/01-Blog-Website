@@ -8,7 +8,11 @@ if (localStorage.getItem("login") === null) {
 } else {
   log.innerHTML = "Log Out";
   log.addEventListener("click", () => {
-    localStorage.removeItem("login");
-    window.location.replace("./index.html");
+    let cnf = confirm("Are You Sure, You Want to LOGOUT ?");
+
+    if (cnf === true) {
+      localStorage.removeItem("login");
+      window.location.replace("./index.html"); 
+    }
   });
 }
