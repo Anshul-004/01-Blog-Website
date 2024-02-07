@@ -18,12 +18,12 @@ if (localStorage.getItem("login") === null) {
   let list = localStorage.getItem("users");
   let login = localStorage.getItem("login");
   list = JSON.parse(list);
-  nm = list[login].name;
+  nm = list[login].name.split(" ")[0]; //.split(" ")[0] will split the name and then return element at 0th index.
   usr.innerHTML = `Hello, <b>${nm}</b> !`;
 }
 let imgp = document.querySelector(".rhs");
 wrt_url.addEventListener("blur", () => {
-  imgp.innerHTML = `<img src="${wrt_url.value}" alt="blg-img"></img>`;
+  imgp.innerHTML = `<img src="${wrt_url.value}" alt="blog content img"></img>`;
 });
 
 wrt_button.addEventListener("click", () => {

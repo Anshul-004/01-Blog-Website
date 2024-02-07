@@ -87,6 +87,7 @@ function delelement() {
         return temp.id != id;
       });
       localStorage.setItem("blogs", JSON.stringify(newblogs));
+      toastersuccess("Blog Deleted Successfully");
       printblog();
     });
   });
