@@ -14,6 +14,7 @@
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 </head>
 
@@ -32,7 +33,8 @@
             </ul>
             <p class="wbtn">
                 <!-- button link kia hai -->
-                <button type="button" id="log">Log</button>
+                <button type="button">
+                    <span id="log"></span>&nbsp;<i class="fa fa-user" aria-hidden="true"></i></button>
                 <button type="button" onclick="location.href='./write.html'">Write &nbsp;<i class="fa fa-pencil"
                         aria-hidden="true"></i> </button>
             </p>
@@ -40,6 +42,8 @@
 
         <section class="bbg" id="dyn-blog"></section>
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/util.js"></script>
     <script src="./js/my-blog.js"></script>
 </body>
 

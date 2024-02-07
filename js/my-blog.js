@@ -1,6 +1,9 @@
 //if login notfound
 if (localStorage.getItem("login") === null) {
-  window.location.replace("./login.html");
+  toasterdanger("Login First");
+  setTimeout(() => {
+    window.location.replace("./login.html");
+  }, 300);
 }
 
 //for login button
@@ -29,7 +32,6 @@ if (localStorage.getItem("login") === null) {
     });
   });
 }
-
 //userblogs
 
 function printblog() {

@@ -10,7 +10,10 @@ let nm = null;
 
 //if login notfound
 if (localStorage.getItem("login") === null) {
-  window.location.replace("./login.html");
+  toasterdanger("Login First");
+  setTimeout(() => {
+    window.location.replace("./login.html");
+  }, 300);
 } else {
   let list = localStorage.getItem("users");
   let login = localStorage.getItem("login");
@@ -43,7 +46,7 @@ wrt_button.addEventListener("click", () => {
     ext_blog.unshift(blog);
 
     localStorage.setItem("blogs", JSON.stringify(ext_blog));
-    toastersuccess("Blog saved successfully")
+    toastersuccess("Blog saved successfully");
 
     wrt_title.value = "";
     wrt_desc.value = "";
